@@ -1,6 +1,9 @@
 const {
-  addNoteHandler, getAllNotesHandler, getNoteByIdHandler,
-  editNoteByIdHandler, deleteNoteByIdHandler,
+  addNoteHandler,
+  getAllNotesHandler,
+  getNoteByIdHandler,
+  editNoteByIdHandler,
+  deleteNoteByIdHandler,
 } = require('./handler');
 
 const routes = [
@@ -8,11 +11,6 @@ const routes = [
     method: 'POST',
     path: '/notes',
     handler: addNoteHandler,
-    options: {
-      cors: {
-        origin: ['*'],
-      },
-    },
   },
   {
     method: 'GET',
